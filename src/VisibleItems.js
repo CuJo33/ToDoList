@@ -1,6 +1,7 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
 import Item from "./Item";
+import "./index.css";
 
 function VisibleItems(props) {
   return (
@@ -8,15 +9,13 @@ function VisibleItems(props) {
       <Table>
         <thead>
           <tr>
-            <div>
-              <th>ID</th>
-            </div>
+            <th>ID</th>
             <th>Item</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
-          {props.items.map((item, i) => (
+          {props.items.map((item) => (
             <Item
               key={item.id}
               {...item}
