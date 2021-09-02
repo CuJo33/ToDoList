@@ -9,8 +9,11 @@ const Add = (props) => {
   let input;
   return (
     <>
-      <Card className="mb-5 mt-2">
+      <Card className="mb-4 mt-2">
         <Card.Body>
+          <label for="Add">
+            What would you like to add to your to do list?
+          </label>
           <Form
             onSubmit={(e) => {
               e.preventDefault();

@@ -17,13 +17,16 @@ const App = (props) => {
           id="logo"
           src={Cujo_head}
           alt="Creator avatar"
-          width="60"
-          height="60"
+          width="100"
+          height="100"
         />
-        <Navbar.Brand className="ml-3">To Do List</Navbar.Brand>
+        <Navbar.Brand className="ml-3" id="branding-header">
+          presents...
+        </Navbar.Brand>
       </Navbar>
-      <Container>
-        <br></br>
+      <Container className="mt-5" id="container-box">
+        <br />
+        <h2 className="ml-3 mb-3">A To Do List</h2>
         <Add />
         <Links />
         <VisibleItemList />
