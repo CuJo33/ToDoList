@@ -8,13 +8,15 @@ function VisibleItems(props) {
       <Table>
         <thead>
           <tr>
-            <th>ID</th>
+            <div>
+              <th>ID</th>
+            </div>
             <th>Item</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
-          {props.items.map((item) => (
+          {props.items.map((item, i) => (
             <Item
               key={item.id}
               {...item}

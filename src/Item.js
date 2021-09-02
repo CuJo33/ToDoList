@@ -44,7 +44,6 @@ function Item(props) {
           )}
         </span>
       </td>
-
       <td>
         <Button
           variant={props.completed ? "warning" : "success"}
