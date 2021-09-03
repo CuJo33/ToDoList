@@ -31,8 +31,6 @@ function mapDispatchToProps(dispatch) {
       dispatch(removeItem(id));
     },
     editClick: (text, id) => {
-      console.log(text);
-      console.log(id);
       dispatch(editItem(text, id));
     },
   };

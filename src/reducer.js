@@ -19,12 +19,16 @@ function visibilityFilterReducer(state = VisibilityFilters.SHOW_ALL, action) {
 }
 
 function itemReducer(state = [], action) {
+  let lastNumber = 0;
+  if (JSON.stringify(state) != "[]") {
+    lastNumber = state[state.length - 1].id + 1;
+  }
   switch (action.type) {
     case ADD_ITEM:
       return [
         ...state,
         {
-          id: action.id,
+          id: lastNumber,
           description: action.text,
           completed: false,
         },
@@ -34,9 +38,7 @@ function itemReducer(state = [], action) {
         return action.id !== value.id;
       });
     case CLEAR_ITEM:
-      return state.filter((value) => {
-        return action.id !== value.id;
-      });
+      return [];
     case TOGGLE_ITEM:
       return state.map((item) => {
         if (item.id === action.id) {

@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 const Clear = (props) => {
   return (
     <>
-      <Button className="ml-5" type="submit">
+      <Button id="clear-button" type="submit">
         Clear List
       </Button>
     </>

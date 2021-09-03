@@ -35,7 +35,7 @@ function Item(props) {
               }}
             >
               <input onChange={(e) => handleChange(e)} value={value} />
-              <Button className="ml-5" type="submit">
+              <Button className="itembuttons" type="submit">
                 Update Item
               </Button>
             </Form>
@@ -47,6 +47,7 @@ function Item(props) {
 
       <td>
         <Button
+          className="itembuttons"
           variant={props.completed ? "warning" : "success"}
           onClick={props.onClick}
         >
@@ -54,14 +55,18 @@ function Item(props) {
         </Button>
 
         <Button
-          className="ml-5"
+          className="itembuttons"
           variant="info"
           onClick={() => cClicked((prev) => !prev)}
           // onsubmit of that function to then pass up into redux
         >
           Edit
         </Button>
-        <Button className="ml-5" variant="danger" onClick={props.removeClick}>
+        <Button
+          className="itembuttons"
+          variant="danger"
+          onClick={props.removeClick}
+        >
           Remove
         </Button>
       </td>
