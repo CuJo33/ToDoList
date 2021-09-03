@@ -2,6 +2,7 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Clear from "./Clear";
 import { connect } from "react-redux";
 import { addItem } from "./actions";
 
@@ -32,6 +33,7 @@ const Add = (props) => {
             <Button className="ml-5" type="submit">
               Add Item{" "}
             </Button>
+            <Clear />
           </Form>
         </Card.Body>
       </Card>

@@ -3,6 +3,7 @@ import {
   ADD_ITEM,
   REMOVE_ITEM,
   EDIT_ITEM,
+  CLEAR_ITEM,
   TOGGLE_ITEM,
   SET_VISIBILITY_FILTER,
 } from "./actions.js";
@@ -29,6 +30,10 @@ function itemReducer(state = [], action) {
         },
       ];
     case REMOVE_ITEM:
+      return state.filter((value) => {
+        return action.id !== value.id;
+      });
+    case CLEAR_ITEM:
       return state.filter((value) => {
         return action.id !== value.id;
       });

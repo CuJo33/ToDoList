@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Add from "./Add";
+import Clear from "./Clear";
 import Links from "./Links";
 import VisibleItemList from "./VisibleItemList";
 import Cujo_head from "./cujo_head.jpg";
